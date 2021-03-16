@@ -18,6 +18,12 @@ func Handle(settings *HandleSettings) error {
 	return http.ListenAndServe(settings.ListenAddr, hdl)
 }
 
+func NewHttpHandle() *HTTPHandle {
+	return &HTTPHandle{
+		link: new(BridgeLink),
+	}
+}
+
 type HTTPHandle struct {
 	link *BridgeLink
 }

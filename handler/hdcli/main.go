@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/xiaokangwang/BrowserBridge/handler"
 	"os"
+
+	"github.com/v2fly/BrowserBridge/handler"
 )
 
 func main() {

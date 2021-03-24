@@ -2,13 +2,15 @@ package handler
 
 import (
 	"fmt"
-	"github.com/gorilla/websocket"
-	"github.com/xiaokangwang/BrowserBridge/handler/websocketadp"
-	"github.com/xtaci/smux"
 	"io"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/gorilla/websocket"
+	"github.com/xtaci/smux"
+
+	"github.com/v2fly/BrowserBridge/handler/websocketadp"
 )
 
 func (hs HTTPHandle) ServeBridge(rw http.ResponseWriter, r *http.Request) {

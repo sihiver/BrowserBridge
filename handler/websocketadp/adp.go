@@ -2,9 +2,10 @@ package websocketadp
 
 import (
 	"bytes"
-	"github.com/gorilla/websocket"
 	"net"
 	"time"
+
+	"github.com/gorilla/websocket"
 )
 
 func NewWsAdp(ws *websocket.Conn) *WsAdp {

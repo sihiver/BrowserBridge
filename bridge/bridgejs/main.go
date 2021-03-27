@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/gopherjs/gopherjs/js"
-	"github.com/xiaokangwang/BrowserBridge/bridge"
 	"log"
 	"net/url"
+
+	"github.com/gopherjs/gopherjs/js"
+
+	"github.com/v2fly/BrowserBridge/bridge"
 )
 
 func main() {

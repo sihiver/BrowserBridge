@@ -1,8 +1,9 @@
 package handler
 
 import (
-	"github.com/xtaci/smux"
 	"net/http"
+
+	"github.com/xtaci/smux"
 )
 
 type HandleSettings struct {

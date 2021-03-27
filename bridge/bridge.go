@@ -2,11 +2,13 @@ package bridge
 
 import (
 	"fmt"
-	"github.com/gopherjs/websocket"
-	"github.com/xiaokangwang/BrowserBridge/proto"
-	"github.com/xtaci/smux"
 	"io"
 	"time"
+
+	"github.com/gopherjs/websocket"
+	"github.com/xtaci/smux"
+
+	"github.com/v2fly/BrowserBridge/proto"
 )
 
 type Settings struct {

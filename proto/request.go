@@ -2,8 +2,9 @@ package proto
 
 import (
 	"bytes"
-	"github.com/lunixbochs/struc"
 	"io"
+
+	"github.com/lunixbochs/struc"
 )
 
 type WebsocketLength struct {

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/gopherjs/gopherjs/js"
-	"github.com/xiaokangwang/BrowserBridge/bridge"
+	"github.com/v2fly/BrowserBridge/bridge"
 	"log"
 	"net/url"
 )

@@ -3,7 +3,7 @@ package bridge
 import (
 	"fmt"
 	"github.com/gopherjs/websocket"
-	"github.com/xiaokangwang/BrowserBridge/proto"
+	"github.com/v2fly/BrowserBridge/proto"
 	"github.com/xtaci/smux"
 	"io"
 	"time"

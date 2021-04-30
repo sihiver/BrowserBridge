@@ -59,3 +59,23 @@ func (hs HTTPHandle) Dial(remoteaddr string) (io.ReadWriteCloser, error) {
 
 	return stream, nil
 }
+
+func (hs HTTPHandle) Dial2(remoteaddr, protocol string) (io.ReadWriteCloser, error) {
+	if hs.link.bridgemux == nil {
+		return nil, errors.New("link is not connected, please connect your browser to the address")
+	}
+	stream, err := hs.link.bridgemux.Open()
+	if err != nil {
+		fmt.Println(err.Error())
+		hs.link.bridgemux = nil
+	}
+	var req proto.WebsocketConnectionRequest
+	req.Destination = remoteaddr
+	req.DestinationSize = uint32(len(remoteaddr))
+	req.ProtocolString = protocol
+	req.ProtocolStringSize = uint32(len(protocol))
+
+	proto.WriteRequest(stream, &req)
+
+	return stream, nil
+}

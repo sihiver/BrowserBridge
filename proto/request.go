@@ -13,8 +13,10 @@ type WebsocketLength struct {
 }
 
 type WebsocketConnectionRequest struct {
-	DestinationSize uint32 `struc:"uint32,big,sizeof=Destination"`
-	Destination     string
+	DestinationSize    uint32 `struc:"uint32,big,sizeof=Destination"`
+	Destination        string
+	ProtocolStringSize uint32 `struc:"uint32,big,sizeof=ProtocolString"`
+	ProtocolString     string
 }
 
 func ReadRequest(reader io.Reader) (error, *WebsocketConnectionRequest) {

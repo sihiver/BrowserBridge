@@ -6,6 +6,7 @@ import (
 	"github.com/v2fly/BrowserBridge/proto"
 	"github.com/xtaci/smux"
 	"io"
+	"net"
 	"time"
 )
 
@@ -38,7 +39,15 @@ func Bridge(s *Settings) {
 						fmt.Println(err)
 						return
 					}
-					conn2, err := websocket.Dial(req.Destination)
+					dialfunc := func() (net.Conn, error) {
+						return websocket.Dial(req.Destination)
+					}
+					if req.ProtocolStringSize != 0 {
+						dialfunc = func() (net.Conn, error) {
+							return websocket.Dial2(req.Destination, req.ProtocolString)
+						}
+					}
+					conn2, err := dialfunc()
 					if err != nil {
 						fmt.Println(err)
 						stream.Close()

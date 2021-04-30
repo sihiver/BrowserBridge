@@ -9,3 +9,7 @@ require (
 	github.com/lunixbochs/struc v0.0.0-20200707160740-784aaebc1d40
 	github.com/xtaci/smux v1.5.15
 )
+
+replace (
+	github.com/gopherjs/websocket => ./vendor2/github.com/gopherjs/websocket/
+)

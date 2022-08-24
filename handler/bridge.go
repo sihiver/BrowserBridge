@@ -10,7 +10,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/xtaci/smux"
 
-	"github.com/v2fly/BrowserBridge/handler/websocketadp"
+	"github.com/sihiver/BrowserBridge/handler/websocketadp"
 )
 
 func (hs HTTPHandle) ServeBridge(rw http.ResponseWriter, r *http.Request) {

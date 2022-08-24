@@ -1,4 +1,4 @@
-module github.com/v2fly/BrowserBridge
+module github.com/sihiver/BrowserBridge
 
 go 1.16
 

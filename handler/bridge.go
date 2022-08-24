@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gorilla/websocket"
+	"github.com/djoeni/websocket"
 	"github.com/xtaci/smux"
 
 	"github.com/sihiver/BrowserBridge/handler/websocketadp"

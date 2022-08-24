@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gorilla/websocket"
+	"github.com/djoeni/websocket"
 
 	"github.com/v2fly/BrowserBridge/handler/websocketadp"
 	"github.com/v2fly/BrowserBridge/proto"

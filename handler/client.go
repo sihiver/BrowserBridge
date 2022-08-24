@@ -8,8 +8,8 @@ import (
 
 	"github.com/djoeni/websocket"
 
-	"github.com/v2fly/BrowserBridge/handler/websocketadp"
-	"github.com/v2fly/BrowserBridge/proto"
+	"github.com/sihiver/BrowserBridge/handler/websocketadp"
+	"github.com/sihiver/BrowserBridge/proto"
 )
 
 func (hs HTTPHandle) ServeClient(rw http.ResponseWriter, r *http.Request) {

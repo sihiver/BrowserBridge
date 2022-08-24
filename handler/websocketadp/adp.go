@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/gorilla/websocket"
+	"github.com/djoeni/websocket"
 )
 
 func NewWsAdp(ws *websocket.Conn) *WsAdp {
